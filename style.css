@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: rgb(43, 43, 43);
+    background-color: black;
     transition: background-color 0.3s;
 }
 
@@ -22,17 +22,18 @@ h3 {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
-
 .clock {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    border: solid 5px rgb(252, 255, 55);
+    border: solid 5px rgb(251, 255, 0);
     position: relative;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
     overflow: hidden;
-    transition: background 1s ease-in-out;
+    transition: background-color 1s ease-in-out; 
+    background-color: rgb(10, 10, 60);
 }
+
 
 #second-hand, #minute-hand, #hour-hand {
     position: absolute;
@@ -59,7 +60,7 @@ h3 {
 #hour-hand {
     height: 90px;
     width: 8px;
-    background-color: rgb(205, 112, 255);
+    background-color: rgb(187, 73, 248);
 }
 
 #center {
