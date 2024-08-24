@@ -19,18 +19,9 @@ function getTime() {
     minutesHand.style.transform = `rotate(${minutes * timeInterval + seconds / 10}deg)`;
     hoursHand.style.transform = `rotate(${(hours % 12) * 30 + minutes / 2}deg)`;
     document.querySelector('h1').innerText = `${hours}:${minutes}:${seconds}`;
-    updateTheme(hours);
+
 }
 
-function updateTheme(hours) {
-    if (hours >= 6 && hours < 18) {
-        // Day Theme
-        clockContainer.style.background = 'linear-gradient(to right, #FFEEAD, #FFDB4A)';
-    } else {
-        // Night Theme
-        clockContainer.style.background = 'linear-gradient(to right, #2E3A59, #1B2735)';
-    }
-}
 
 function createHourMarkers() {
     for (let i = 0; i < 12; i++) {
@@ -43,6 +34,6 @@ function createHourMarkers() {
 
 
 setInterval(getTime, 100);
-getTime();  // Initial call to set clock hands without waiting
+getTime();  
 
-createHourMarkers();  // Add hour markers on page load
+createHourMarkers(); 
